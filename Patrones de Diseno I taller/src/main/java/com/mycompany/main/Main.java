@@ -9,7 +9,7 @@ package com.mycompany.main;
  * @author User
  */
 import com.mycompany.main.factory.*;
-import com.mycompany.main.facade.TiendaFacade;
+import com.mycompany.main.facade.VirtualCare;
 import com.mycompany.main.decorator.*;
 
 public class Main {
@@ -30,8 +30,10 @@ public class Main {
         System.out.println("Tipo: " + tarjetaVIP.getTipo() + ", Costo Anual: " + tarjetaVIP.getCostoAnual() + ", Limite de Credito: " + tarjetaVIP.getLimiteCredito());
 
         System.out.println("\nEjemplo de Facade:");
-        TiendaFacade tiendaFacade = new TiendaFacade();
-        tiendaFacade.realizarTransaccion();
+        VirtualCare virtualCare = new VirtualCare();
+
+        System.out.println("Customer interacting with VirtualCare:");
+        virtualCare.transaction1();
 
         System.out.println("\nEjemplo de Decorator:");
         Notificable notification = new Notification();
